@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+	
+</style>
+<body>
+	{% include 'index.html' %}
+{% if obj %}
+  {% if predict == 'cloudy' %}
+	<div class="container">
+		<div class="mt8 lg:-mx-6 lg:flex lg:items-center">
+			<img class="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96" src="{{ obj.image.url }}" alt="">
+			<div class="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
+				<p class="text-sm text-blue-500 uppercase">THIS IMAGE FOUNDED IN:</p>
+				<p class="block mt-4 text-2xl font-semibold text-gray-800  dark:text-white md:text-3xl">
+				Cloudy
+				</p><br>
+				<p class="text-sm text-blue-500 uppercase">Description:</p>
+				<p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+					Visible satellite pictures can only be viewed during the day, since clouds reflect the light from the sun. On these images, clouds show up as white, the ground is normally grey, and water is dark. In winter, snow-covered ground will be white, which can make distinguishing clouds more difficult.
+				</p><br>
+				
+			</div>
+			</div>
+		</div>
+	</div>
+  {% elif predict == 'desert' %}
+  <div class="mt8 lg:-mx-6 lg:flex lg:items-center">
+
+
+  <img class="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96" src="{{ obj.image.url }}" alt="">
+
+
+
+  <div class="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
+      <p class="text-sm text-blue-500 uppercase">THIS IMAGE FOUNDED IN:</p>
+
+      <p class="block mt-4 text-2xl font-semibold text-gray-800  dark:text-white md:text-3xl">
+          Desert
+      </p><br>
+
+      
+      <p class="text-sm text-blue-500 uppercase">Description:</p>
+      <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+		Deep learning algorithms process satellite images of deserts, unveiling intricate details like shifting sand dunes and subtle variations in surface temperature. These predictions offer insights into desert dynamics, tracking changes in vegetation and identifying potential areas of environmental concern. High-resolution imagery, analyzed through neural networks, provides a nuanced view of desert landscapes, aiding in the study of climate change impact and resource management. From dune formations to land cover alterations, deep learning enhances our ability to comprehend the complexities of deserts through satellite observations.
+
+
+
+
+
+
+          
+      </p><br>
+
+      
+
+
+      
+  </div>
+  </div>
+  </div>
+
+  {% elif predict == 'green_area' %}
+  <div class="mt8 lg:-mx-6 lg:flex lg:items-center">
+
+
+  <img class="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96" src="{{ obj.image.url }}" alt="">
+
+
+
+  <div class="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
+      <p class="text-sm text-blue-500 uppercase">THIS IMAGE FOUNDED IN:</p>
+
+      <p class="block mt-4 text-2xl font-semibold text-gray-800  dark:text-white md:text-3xl">
+          Green Area
+      </p><br>
+
+      
+      <p class="text-sm text-blue-500 uppercase">Description:</p>
+      <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+		Deep learning models, analyzing satellite images, precisely identify and characterize lush green areas within landscapes. These advanced algorithms discern subtle variations in vegetation density, providing insights into ecological health and biodiversity. The predictions enable accurate monitoring of changes in green cover over time, aiding in environmental conservation efforts. The integration of deep learning in satellite analysis enhances our capacity to assess and manage green areas, facilitating a more nuanced understanding of ecosystems and their dynamics. This technology contributes to proactive measures for sustainable land use and conservation.
+          
+      </p><br>
+
+      
+
+
+      
+  </div>
+  </div>
+  </div>
+
+  {% elif predict == 'shipsnet' %}
+  <div class="mt8 lg:-mx-6 lg:flex lg:items-center">
+
+
+  <img class="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96" src="{{ obj.image.url }}" alt="">
+
+
+
+  <div class="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
+      <p class="text-sm text-blue-500 uppercase">THIS IMAGE FOUNDED IN:</p>
+
+      <p class="block mt-4 text-2xl font-semibold text-gray-800  dark:text-white md:text-3xl">
+          Shipsnet
+      </p><br>
+
+      
+      <p class="text-sm text-blue-500 uppercase">Description:</p>
+      <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+		ShipsNet leverages deep learning to analyze satellite images, accurately detecting and classifying maritime vessels on the open sea. Through advanced neural networks, it identifies ship positions, sizes, and types, providing real-time insights into maritime traffic patterns. This predictive model aids in maritime surveillance, supporting efforts in navigation safety, piracy prevention, and environmental monitoring. By harnessing the power of deep learning, ShipsNet enhances our ability to track and manage vessel movements, contributing to improved maritime security and efficient sea traffic management. The technology serves as a valuable tool for both commercial and security applications.
+          
+      </p><br>
+
+      
+
+
+      
+  </div>
+  </div>
+  </div>
+
+
+  {% elif predict == 'water' %}
+  <div class="mt8 lg:-mx-6 lg:flex lg:items-center">
+
+
+  <img class="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96" src="{{ obj.image.url }}" alt="">
+
+
+
+  <div class="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
+      <p class="text-sm text-blue-500 uppercase">THIS IMAGE FOUNDED IN:</p>
+
+      <p class="block mt-4 text-2xl font-semibold text-gray-800  dark:text-white md:text-3xl">
+          Water
+      </p><br>
+
+      
+      <p class="text-sm text-blue-500 uppercase">Description:</p>
+      <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+		Deep learning applied to satellite imagery accurately identifies and analyzes water bodies, discerning features such as lakes, rivers, and oceans. Through advanced algorithms, this technology provides insights into water quality, levels, and changes over time. The predictions contribute to monitoring and managing water resources, supporting environmental conservation and sustainable water use. By leveraging neural networks, deep learning enhances our understanding of hydrological patterns and aids in addressing water-related challenges, from drought prediction to flood monitoring. The integration of deep learning in satellite analysis transforms how we observe and interpret water dynamics on a global scale.
+          
+      </p><br>
+
+      
+
+
+      
+  </div>
+  </div>
+  </div>
+
+  {% elif predict == 'wildfire' %}
+  <div class="mt8 lg:-mx-6 lg:flex lg:items-center">
+
+
+  <img class="object-cover w-full lg:mx-6 lg:w-1/2 rounded-xl h-72 lg:h-96" src="{{ obj.image.url }}" alt="">
+
+
+
+  <div class="mt-6 lg:w-1/2 lg:mt-0 lg:mx-6 ">
+      <p class="text-sm text-blue-500 uppercase">THIS IMAGE FOUNDED IN:</p>
+
+      <p class="block mt-4 text-2xl font-semibold text-gray-800  dark:text-white md:text-3xl">
+          Wildfire
+      </p><br>
+
+      
+      <p class="text-sm text-blue-500 uppercase">Description:</p>
+      <p class="mt-3 text-sm text-gray-500 dark:text-gray-300 md:text-sm">
+		Deep learning models analyze satellite images to predict and monitor wildfires, detecting heat signatures and smoke plumes with high accuracy. These advanced algorithms enable early detection, aiding rapid response and containment efforts. By harnessing neural networks, the technology enhances wildfire mapping, providing real-time insights into the fire's progression and potential impact on ecosystems and communities. The integration of deep learning in satellite analysis transforms wildfire management, improving our ability to mitigate the effects of these natural disasters through timely and informed decision-making. This proactive approach contributes to more effective firefighting strategies and overall disaster resilience.
+
+
+
+
+
+
+          
+      </p><br>
+
+      
+
+
+      
+  </div>
+  </div>
+  </div>
+{% endif %}
+{% endif %}
+</body>
+</html>
